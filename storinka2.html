@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Часті запитання про COVID-19</title>
+  <style>
+    .header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .header h1 {
+      font-family: 'Arial Black', sans-serif;
+      font-size: 40px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+      margin: 10px;
+    }
+    .question {
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 50px;
+    }
+
+    .answer {
+      display: none;
+      margin-bottom: 10px;
+    }
+    
+    .question + .answer {
+      margin-top: 10px;
+    }
+    
+    .faq{
+      margin-top: 20px;
+      gap: 20%;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Часті запитання про COVID-19</h1>
+  </div>
+  
+
+  <div class="footer">
+    <a href="https://uk.wikipedia.org/wiki/COVID-19" target="_blank">Довідка щодо COVID-19</a>
+    <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1" target="_blank">Всесвітня організація охорони здоров'я (WHO)</a>
+  </div>
+  
+
+  <div class="faq">
+   <div class="question">Чим спричинено COVID-19?</div>
+    <div class="answer">COVID-19 спричинено новим коронавірусом, відомим як SARS-CoV-2.</div>
+
+    <div class="question">Як поширюється COVID-19?</div>
+    <div class="answer">COVID-19 передається переважно через крапельки, що виділяються під час кашлю або чхання інфікованої особи.</div>
+
+    <div class="question">Які симптоми COVID-19?</div>
+    <div class="answer">Симптоми COVID-19 включають лихоманку, кашель, втрату смаку або нюху, втому та утруднення дихання.</div>
+
+    <div class="question">Як захиститися від COVID-19?</div>
+    <div class="answer">Основні заходи для захисту від COVID-19 включають носіння масок, дотримання фізичної дистанції від інших людей, часте миття рук або використання антисептичних засобів на спиртовій основі, уникання торкання обличчя, особливо очей, носа та рота, та покриття рота і носа при кашлі або чханні.</div>
+
+    <div class="question">Чи є вакцина проти COVID-19?</div>
+    <div class="answer">Так, на даний момент розроблено декілька вакцин проти COVID-19, які успішно пройшли клінічні випробування та отримали дозвіл на використання в різних країнах. Ці вакцини демонструють високу ефективність у запобіганні важкому перебігу хвороби та зниженні ризику передачі вірусу.</div>
+    
+    <div class="question">Що робити якщо є симптоми COVID-19?</div>
+    <div class="answer">Якщо у вас є симптоми COVID-19, слід негайно звернутися до лікаря або організації охорони здоров'я в своєму регіоні для отримання консультації та інструкцій щодо подальших дій. Зазвичай рекомендується ізоляція від інших людей та дотримання медичних порад для запобігання поширенню вірусу.</div>
+
+
+
+  </div>
+
+  <script>
+    const questions = document.querySelectorAll('.question');
+
+    questions.forEach((question) => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+        } else {
+          answer.style.display = 'block';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
